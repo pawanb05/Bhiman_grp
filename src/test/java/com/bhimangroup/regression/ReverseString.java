@@ -22,11 +22,9 @@ public class ReverseString
 		
 	}
 	
-	
-	
 	public static void main(String[] args)
 	{
-		
+		new ReverseString().reverse();
 		
 	}
 
