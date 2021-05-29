@@ -37,48 +37,48 @@ public class Regression1 extends BaseClass
 //		Keywords.clickOnElement("XPATH", "//button[text()='OK']");
 //		Thread.sleep(1000);
 	}
-	//@Test(groups= {"Login"})
-//	public void TC_02() throws InterruptedException 
-//	{		
-//		Keywords.openBrowser("Chrome");
-//		Keywords.maximizingWindow();
-//		Keywords.openURL("http://103.50.162.196/testing/user-login.php");
-//		Keywords.enterText("CSS", "#username", "1234567890");
-//		Keywords.enterText("CSS", "#password", "admin");
-//		Keywords.clickOnElement("XPATH", "//button[text()='Login']");
+	@Test(groups= {"Login"})
+	public void TC_02() throws InterruptedException 
+	{		
+		Keywords.openBrowser("Chrome");
+		Keywords.maximizingWindow();
+		Keywords.openURL("http://103.50.162.196/testing/user-login.php");
+		Keywords.enterText("CSS", "#username", "1234567890");
+		Keywords.enterText("CSS", "#password", "admin");
+		Keywords.clickOnElement("XPATH", "//button[text()='Login']");
+		Thread.sleep(1000);
+		LOG.info("Login not Successfull..");
+//		Keywords.clickOnElement("XPATH", "//button[text()='OK']");
 //		Thread.sleep(1000);
-//		log.info("Login not Successfull..");
-////		Keywords.clickOnElement("XPATH", "//button[text()='OK']");
-////		Thread.sleep(1000);
-//	}
-//	@Test(groups= {"Login"})
-//public void TC_03() throws InterruptedException 
-//{		
-//	Keywords.openBrowser("Chrome");
-//	Keywords.maximizingWindow();
-//	Keywords.openURL("http://103.50.162.196/testing/user-login.php");
-//	Keywords.enterText("CSS", "#username", "9876543210");
-//	Keywords.enterText("CSS", "#password", "admin123");
-//	Keywords.clickOnElement("XPATH", "//button[text()='Login']");
+	}
+	@Test(groups= {"Login"})
+public void TC_03() throws InterruptedException 
+{		
+	Keywords.openBrowser("Chrome");
+	Keywords.maximizingWindow();
+	Keywords.openURL("http://103.50.162.196/testing/user-login.php");
+	Keywords.enterText("CSS", "#username", "9876543210");
+	Keywords.enterText("CSS", "#password", "admin123");
+	Keywords.clickOnElement("XPATH", "//button[text()='Login']");
+	Thread.sleep(1000);
+//	Keywords.clickOnElement("XPATH", "//button[text()='OK']");
 //	Thread.sleep(1000);
+}
+@Test(groups= {"Login"})
+public void TC_04() throws InterruptedException 
+{		
+	Keywords.openBrowser("Chrome");
+	Keywords.maximizingWindow();
+	Keywords.openURL("http://103.50.162.196/testing/user-login.php");
+	Keywords.enterText("CSS", "#username", "9876543210");
+	Keywords.enterText("CSS", "#password", "9876543210");
+	Keywords.clickOnElement("XPATH", "//button[text()='Login']");
+	Thread.sleep(1000);	
+	LOG.info("Login not Successfull..");
+
 ////	Keywords.clickOnElement("XPATH", "//button[text()='OK']");
 ////	Thread.sleep(1000);
-//}
-//@Test(groups= {"Login"})
-//public void TC_04() throws InterruptedException 
-//{		
-//	Keywords.openBrowser("Chrome");
-//	Keywords.maximizingWindow();
-//	Keywords.openURL("http://103.50.162.196/testing/user-login.php");
-//	Keywords.enterText("CSS", "#username", "9876543210");
-//	Keywords.enterText("CSS", "#password", "9876543210");
-//	Keywords.clickOnElement("XPATH", "//button[text()='Login']");
-//	Thread.sleep(1000);	
-//	log.info("Login not Successfull..");
-//
-////	Keywords.clickOnElement("XPATH", "//button[text()='OK']");
-////	Thread.sleep(1000);
-//}
+}
 //	@Test(groups= {"Login"})
 //public void TC_05() throws InterruptedException 
 //{		
@@ -89,10 +89,10 @@ public class Regression1 extends BaseClass
 //	Keywords.enterText("CSS", "#password", "admin");
 //	Keywords.clickOnElement("XPATH", "//button[text()='Login']");
 //	Thread.sleep(1000);
-////	Keywords.clickOnElement("XPATH", "//button[text()='OK']");
-////	Thread.sleep(1000);
-//	log.info("Login not Successfull..");
-//
+//////	Keywords.clickOnElement("XPATH", "//button[text()='OK']");
+//////	Thread.sleep(1000);
+////	log.info("Login not Successfull..");
+////
 //}
 //	@Test(groups= {"Login"})
 // public void TC_06() throws InterruptedException 
@@ -198,7 +198,7 @@ public class Regression1 extends BaseClass
 //		Keywords.enterText("CSS", FileUtility.getLocator("micrcode"),"123456789");
 //		Keywords.clickOnElement("XPATH", FileUtility.getLocator("submitbutton"));
 //		Keywords.clickOnElement("XPATH", "//button[text()='OK']");		
-		
+//		
 //	}
 //	@Test(groups= {"Masters"})
 //	public void searchBank() 
@@ -220,6 +220,7 @@ public class Regression1 extends BaseClass
 //		Keywords.simpleAlertHandling();
 //		
 //	}
+	
 //	@Test(groups= {"Masters"})
 //	public void editBankDetails() 
 //	{
@@ -236,10 +237,17 @@ public class Regression1 extends BaseClass
 //		Keywords.enterText("CSS", "input#micr_code","480000400");
 //		Keywords.clickOnElement("XPATH", "//input[@type='submit']");
 //	}
+	@Test
+	public void logoChecking() 
+	{
+		boolean s=Keywords.getWebelement("XPATH", "//a[@class='webelement']").isDisplayed();
+		Assert.assertTrue(true, "Logo Is Present..");
 
+	}
 	
-
+	
 }
+
 
 
 
