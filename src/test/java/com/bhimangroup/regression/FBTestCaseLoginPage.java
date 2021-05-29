@@ -20,5 +20,10 @@ public class FBTestCaseLoginPage
 		login.passwordTextBox("9876543210");
 		login.submitbtn();	
   }
+	@Test 
+	public void tearDown() 
+	{
+	  Constants.driver.close();
+	}
 
 }
